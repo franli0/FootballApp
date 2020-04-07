@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--News-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="FootballApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,13 +36,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="News" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-481"/>
+            <point key="canvasLocation" x="1572" y="-954"/>
         </scene>
-        <!--Item-->
+        <!--Following-->
         <scene sceneID="L79-sh-hmZ">
             <objects>
                 <viewController id="dVS-S4-n8B" customClass="ThirdViewController" customModule="FootballApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,14 +52,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xMv-3j-jmw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Hql-Ch-d7L"/>
+                    <tabBarItem key="tabBarItem" title="Following" id="Hql-Ch-d7L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IE-89-KeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarItem title="First" id="Hci-Z1-ySc"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="27"/>
+            <point key="canvasLocation" x="2238" y="247"/>
         </scene>
-        <!--Second-->
+        <!--Matches-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="FootballApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,11 +87,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="722"/>
+            <point key="canvasLocation" x="2238" y="-423"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="pCe-IN-cjg">
+            <objects>
+                <viewController id="6NO-Dt-hAN" customClass="FourthViewController" customModule="FootballApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nyw-C4-ry6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0fw-re-fxu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="G2I-ba-vXu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-Si-Bwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571" y="598"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -107,6 +122,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="dVS-S4-n8B" kind="relationship" relationship="viewControllers" id="Wo9-bC-tK0"/>
+                        <segue destination="6NO-Dt-hAN" kind="relationship" relationship="viewControllers" id="1QL-Ww-9yG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
