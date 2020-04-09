@@ -39,11 +39,25 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        // Get a cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleCell
+        
+        // Get the article that the tableview is asking about
+        let article = articles[indexPath.row]
+        
+        // TODO: Customize it
+        cell.displayArticle(article)
+        
+        // Return the cell
+        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
+        
+        
     }
      
 }
@@ -56,6 +70,10 @@ extension FirstViewController: ArticleModelProtocol {
             
         // Set the articles property of the view controller to the articles passed back from the model
         self.articles = articles
+        
+        // Refresh the tableview
+        tableView.reloadData()
+        
     }
 }
 

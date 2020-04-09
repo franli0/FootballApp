@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e5n-93-Rok">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e5n-93-Rok">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="mSo-pZ-UG8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="mSo-pZ-UG8" customClass="ArticleCell" customModule="FootballApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mSo-pZ-UG8" id="9OT-Wf-TuY">
@@ -32,7 +32,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yFm-Ro-TVV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yFm-Ro-TVV">
                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="100"/>
                                                 </imageView>
                                             </subviews>
@@ -49,6 +49,10 @@
                                             <constraint firstItem="yFm-Ro-TVV" firstAttribute="width" secondItem="mSo-pZ-UG8" secondAttribute="width" multiplier="0.3" id="3m0-4b-Yx3"/>
                                             <constraint firstItem="ddR-nd-Nh2" firstAttribute="width" secondItem="mSo-pZ-UG8" secondAttribute="width" multiplier="0.7" constant="-40" id="42c-16-HwO"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="yFm-Ro-TVV" id="sp4-bH-lF0"/>
+                                            <outlet property="headlineLabel" destination="ddR-nd-Nh2" id="BAe-9h-ehV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
