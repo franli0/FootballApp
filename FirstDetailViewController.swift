@@ -13,10 +13,45 @@ class FirstDetailViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    var articleUrl:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        webView.navigationDelegate = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Check that there's a URL
+        if articleUrl != nil {
+            
+            // Create the URL object
+            let url = URL(string: articleUrl!)
+            
+            guard url != nil else {
+                
+                // Couldn't create the URL object
+                return
+                
+            }
+            
+            // Create the URLRequest object
+            let request = URLRequest(url: url!)
+            
+            // Start spinner
+            spinner.alpha = 1
+            spinner.startAnimating()
+            
+            // Load it in the webview
+            webView.load(request)
+            
+        }
     }
     
 
@@ -30,4 +65,17 @@ class FirstDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension FirstDetailViewController: WKNavigationDelegate {
+    
+    // Get called when the view has finished loading
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        
+        // Stop the spinner and hide it
+        spinner.stopAnimating()
+        spinner.alpha = 0
+        
+    }
+    
 }

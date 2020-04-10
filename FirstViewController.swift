@@ -28,6 +28,30 @@ class FirstViewController: UIViewController {
         model.getArticles()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Detect the indexpath the user selected
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        guard indexPath != nil else {
+            
+            // The user hasn't selected anything
+            return
+            
+        }
+        
+        // Get the article the user tapped on
+        let article = articles[indexPath!.row]
+        
+        // Get a reference to the first detail view controller
+        let firstDetailVC = segue.destination as! FirstDetailViewController
+        
+        // Pass the article url to the first dertail view controller
+        firstDetailVC.articleUrl = article.url!
+        
+    }
+    
 }
 
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,7 +80,8 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        // User has just selected a row, trigger the segue to go to detail
+        performSegue(withIdentifier: "goToFirstDetail", sender: self)
         
     }
      
